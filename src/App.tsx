@@ -1,14 +1,19 @@
-import { ButtonContainer } from "./components/Button.styles";
-import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "./styles/themes/default";
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
+import { GlobalStyle } from './styles/global'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <ButtonContainer variant="primary" />
-      <ButtonContainer variant="secondary" />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <GlobalStyle />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
